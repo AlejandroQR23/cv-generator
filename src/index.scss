@@ -1,2 +1,7 @@
 @import './custom.scss';
 @import '../node_modules/bootstrap/scss/bootstrap';
+
+input,
+textarea {
+  margin-bottom: 1rem;
+}

@@ -1,12 +1,14 @@
 import React from 'react';
 import './form-container.styles.scss';
 
-export class FormContainer extends React.Component {
-  //   constructor() {
-  //     super();
-  //   }
+import { PersonalInfo } from '../personal-info/personal-info.component';
+import { Education } from '../education/education.component';
+import { Experience } from '../experience/experience.component';
 
-  render() {
-    return <div className='col cv-form mx-2'>CV FORM</div>;
-  }
-}
+export const FormContainer = ({ personalInfo, handlePersonalChange }) => (
+  <div className='col cv-form mx-2 bg-secondary text-light'>
+    <PersonalInfo personalInfo={personalInfo} onChange={handlePersonalChange} />
+    <Education />
+    <Experience />
+  </div>
+);
