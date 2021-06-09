@@ -9,7 +9,7 @@ export const EducationItem = ({ education, index, changeEd, deleteEd }) => {
         className='form-control'
         name='schoolName'
         value={education.schoolName}
-        onChange={(e) => changeEd(e, index)}
+        onChange={(e) => changeEd(e, index, 'education')}
       ></input>
       <input
         type='text'
@@ -17,7 +17,7 @@ export const EducationItem = ({ education, index, changeEd, deleteEd }) => {
         className='form-control'
         name='schoolCity'
         value={education.schoolCity}
-        onChange={(e) => changeEd(e, index)}
+        onChange={(e) => changeEd(e, index, 'education')}
       ></input>
       <input
         type='text'
@@ -25,7 +25,7 @@ export const EducationItem = ({ education, index, changeEd, deleteEd }) => {
         className='form-control'
         name='degree'
         value={education.degree}
-        onChange={(e) => changeEd(e, index)}
+        onChange={(e) => changeEd(e, index, 'education')}
       ></input>
       <input
         type='text'
@@ -33,7 +33,7 @@ export const EducationItem = ({ education, index, changeEd, deleteEd }) => {
         className='form-control'
         name='startDate'
         value={education.startDate}
-        onChange={(e) => changeEd(e, index)}
+        onChange={(e) => changeEd(e, index, 'education')}
       ></input>
       <input
         type='text'
@@ -41,9 +41,12 @@ export const EducationItem = ({ education, index, changeEd, deleteEd }) => {
         className='form-control'
         name='gradDate'
         value={education.gradDate}
-        onChange={(e) => changeEd(e, index)}
+        onChange={(e) => changeEd(e, index, 'education')}
       ></input>
-      <button className='btn btn-primary' onClick={() => deleteEd(index)}>
+      <button
+        className='btn btn-primary'
+        onClick={() => deleteEd(index, 'education')}
+      >
         Delete Education
       </button>
     </div>
