@@ -46,6 +46,7 @@ class App extends Component {
     };
   }
 
+  // * Personal Info
   handlePersonalChange = (e) => {
     const { value, name } = e.target;
 
@@ -61,28 +62,27 @@ class App extends Component {
     }));
   };
 
-  // * Education
-  handleChangeEducation = (e, i) => {
+  // * Experience and Education inputs
+  handleChange = (e, i, field) => {
     const { name, value } = e.target;
 
     this.setState((prevState) => {
-      const newEdu = prevState.education.map((edItem, index) => {
-        if (index === i) return { ...edItem, [name]: value };
-        else return edItem;
+      const newArr = prevState[field].map((item, index) => {
+        if (index === i) return { ...item, [name]: value };
+        else return item;
       });
-      return { ...prevState, education: [...newEdu] };
+      return { ...prevState, [field]: [...newArr] };
     });
   };
 
-  handleDeleteEducation = (i) => {
+  handleDelete = (i, field) => {
     this.setState((prevState) => {
-      const newEdu = prevState.education.filter(
-        (eduItem, index) => index !== i
-      );
-      return { ...prevState, education: [...newEdu] };
+      const newArr = prevState[field].filter((item, index) => index !== i);
+      return { ...prevState, [field]: [...newArr] };
     });
   };
 
+  // * Education
   handleAddEducation = () => {
     this.setState((prevState) => ({
       ...prevState,
@@ -92,6 +92,22 @@ class App extends Component {
           schoolName: '',
           schoolCity: '',
           degree: '',
+          startDate: '',
+          endDate: '',
+        },
+      ],
+    }));
+  };
+
+  // * Experience
+  handleAddExperience = () => {
+    this.setState((prevState) => ({
+      ...prevState,
+      experience: [
+        ...prevState.experience,
+        {
+          position: '',
+          company: '',
           startDate: '',
           gradDate: '',
         },
@@ -113,10 +129,15 @@ class App extends Component {
               experience={experience}
               handlePersonalChange={this.handlePersonalChange}
               handleAddEducation={this.handleAddEducation}
-              handleDeleteEducation={this.handleDeleteEducation}
-              handleChangeEducation={this.handleChangeEducation}
+              handleAddExperience={this.handleAddExperience}
+              handleDelete={this.handleDelete}
+              handleChange={this.handleChange}
             />
-            <PreviewContainer />
+            <PreviewContainer
+              personalInfo={personalInfo}
+              education={education}
+              experience={experience}
+            />
           </div>
         </div>
       </div>
@@ -125,3 +146,5 @@ class App extends Component {
 }
 
 export default App;
+
+// TODO: Shared components: button

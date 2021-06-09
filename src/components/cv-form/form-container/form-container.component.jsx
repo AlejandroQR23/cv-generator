@@ -11,17 +11,23 @@ export const FormContainer = ({
   experience,
   handlePersonalChange,
   handleAddEducation,
-  handleDeleteEducation,
-  handleChangeEducation,
+  handleAddExperience,
+  handleDelete,
+  handleChange,
 }) => (
   <div className='col cv-form mx-2 bg-secondary text-light'>
     <PersonalInfo personalInfo={personalInfo} onChange={handlePersonalChange} />
     <Education
       education={education}
       addEducation={handleAddEducation}
-      changeEducation={handleChangeEducation}
-      deleteEducation={handleDeleteEducation}
+      changeEducation={handleChange}
+      deleteEducation={handleDelete}
     />
-    <Experience />
+    <Experience
+      experience={experience}
+      addExperience={handleAddExperience}
+      changeExperience={handleChange}
+      deleteExperience={handleDelete}
+    />
   </div>
 );
