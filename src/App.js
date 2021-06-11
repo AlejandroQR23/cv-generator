@@ -119,10 +119,10 @@ class App extends Component {
     const { personalInfo, education, experience } = this.state;
 
     return (
-      <div className='App bg-light'>
+      <div className='App'>
         <Header></Header>
-        <div className='container pt-4'>
-          <div className='row gx-4'>
+        <div className='pt-4'>
+          <div className='row justify-content-evenly'>
             <FormContainer
               personalInfo={personalInfo}
               education={education}
