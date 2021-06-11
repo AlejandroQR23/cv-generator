@@ -4,7 +4,7 @@ import { PreviewExperience } from './preview-experience/preview-experience.compo
 import { PreviewEducation } from './preview-education/preview-education.component';
 
 export const PreviewBody = ({ education, experience, description }) => (
-  <div className='preview-body col-8 pt-4'>
+  <div className='preview-body col-9 pt-4'>
     <h5 className='text-dark pb-2'>Description</h5>
     <p className='mb-2'>{description}</p>
     <hr />

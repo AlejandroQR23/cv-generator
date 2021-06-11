@@ -8,7 +8,7 @@ export const Experience = ({
   changeExperience,
   deleteExperience,
 }) => (
-  <div className='experience'>
+  <div className='experience mb-2'>
     <h4>Experience</h4>
     {experience.map((exp, index) => {
       return (

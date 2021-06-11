@@ -5,7 +5,7 @@ export const EducationItem = ({ education, index, changeEd, deleteEd }) => {
     <div className='mt-2'>
       <input
         type='text'
-        placeholder='Name'
+        placeholder='School'
         className='form-control'
         name='schoolName'
         value={education.schoolName}
@@ -44,7 +44,7 @@ export const EducationItem = ({ education, index, changeEd, deleteEd }) => {
         onChange={(e) => changeEd(e, index, 'education')}
       ></input>
       <button
-        className='btn btn-primary'
+        className='btn btn-danger mb-1'
         onClick={() => deleteEd(index, 'education')}
       >
         Delete Education

@@ -43,7 +43,7 @@ export const ExperienceItem = ({ experience, index, changeExp, deleteExp }) => (
       onChange={(e) => changeExp(e, index, 'experience')}
     />
     <button
-      className='btn btn-primary'
+      className='btn btn-danger mb-1'
       onClick={() => deleteExp(index, 'experience')}
     >
       Delete Experience

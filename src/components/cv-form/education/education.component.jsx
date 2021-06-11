@@ -9,7 +9,7 @@ export const Education = ({
   deleteEducation,
 }) => {
   return (
-    <div className='education'>
+    <div className='education mb-2'>
       <h4>Education</h4>
       {education.map((ed, index) => {
         return (
