@@ -2,6 +2,8 @@ import { Component } from 'react';
 
 import './App.css';
 
+import ReactToPrint from 'react-to-print';
+
 import { Footer } from './components/footer/footer.component';
 import { FormContainer } from './components/cv-form/form-container/form-container.component';
 import { Header } from './components/header/header.component';
@@ -128,6 +130,7 @@ class App extends Component {
               personalInfo={personalInfo}
               education={education}
               experience={experience}
+              componentRef={this.componentRef}
               handlePersonalChange={this.handlePersonalChange}
               handleAddEducation={this.handleAddEducation}
               handleAddExperience={this.handleAddExperience}
@@ -135,12 +138,23 @@ class App extends Component {
               handleChange={this.handleChange}
             />
             <PreviewContainer
+              ref={(el) => (this.componentRef = el)}
               personalInfo={personalInfo}
               education={education}
               experience={experience}
             />
           </div>
         </div>
+        <ReactToPrint
+          trigger={() => {
+            return (
+              <div className='d-grid col-4 mx-auto'>
+                <button className='btn btn-success'>Generate CV</button>
+              </div>
+            );
+          }}
+          content={() => this.componentRef}
+        />
         <Footer />
       </div>
     );
