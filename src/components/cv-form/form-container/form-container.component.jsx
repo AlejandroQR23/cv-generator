@@ -15,7 +15,7 @@ export const FormContainer = ({
   handleDelete,
   handleChange,
 }) => (
-  <div className='col cv-form mx-2 bg-secondary text-light'>
+  <div className='col-12 col-xl-5 cv-form mx-2 bg-secondary text-light'>
     <PersonalInfo personalInfo={personalInfo} onChange={handlePersonalChange} />
     <Education
       education={education}
