@@ -1,7 +1,5 @@
 import { Component } from 'react';
 
-import './App.css';
-
 import ReactToPrint from 'react-to-print';
 
 import { Footer } from './components/footer/footer.component';
