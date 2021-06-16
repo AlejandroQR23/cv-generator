@@ -160,5 +160,3 @@ class App extends Component {
 }
 
 export default App;
-
-// TODO: Shared components: button
