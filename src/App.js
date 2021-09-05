@@ -120,10 +120,10 @@ class App extends Component {
     const { personalInfo, education, experience } = this.state;
 
     return (
-      <div className='App'>
+      <div className="App">
         <Header />
-        <div className='py-4'>
-          <div className='row justify-content-evenly'>
+        <div className="py-4">
+          <div className="row justify-content-evenly">
             <FormContainer
               personalInfo={personalInfo}
               education={education}
@@ -146,8 +146,8 @@ class App extends Component {
         <ReactToPrint
           trigger={() => {
             return (
-              <div className='d-grid col-4 mx-auto'>
-                <button className='btn btn-success'>Generate CV</button>
+              <div className="d-grid col-4 mx-auto">
+                <button className="btn btn-success">Generate CV</button>
               </div>
             );
           }}
