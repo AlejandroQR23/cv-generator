@@ -1,52 +1,40 @@
-import React from 'react';
+import React from "react";
 
-export const ExperienceItem = ({ experience, index, changeExp, deleteExp }) => (
-  <div className='mt-2'>
+const ExperienceItem = () => (
+  <div className="mt-2">
     <input
-      type='text'
-      placeholder='Position'
-      className='form-control'
-      name='position'
-      value={experience.position}
-      onChange={(e) => changeExp(e, index, 'experience')}
+      type="text"
+      placeholder="Position"
+      className="form-control"
+      name="position"
     />
     <input
-      type='text'
-      placeholder='Company'
-      className='form-control'
-      name='company'
-      value={experience.company}
-      onChange={(e) => changeExp(e, index, 'experience')}
+      type="text"
+      placeholder="Company"
+      className="form-control"
+      name="company"
     />
     <input
-      type='text'
-      placeholder='City'
-      className='form-control'
-      name='city'
-      value={experience.city}
-      onChange={(e) => changeExp(e, index, 'experience')}
+      type="text"
+      placeholder="City"
+      className="form-control"
+      name="city"
     />
     <input
-      type='text'
-      placeholder='From'
-      className='form-control'
-      name='startDate'
-      value={experience.startDate}
-      onChange={(e) => changeExp(e, index, 'experience')}
+      type="text"
+      placeholder="From"
+      className="form-control"
+      name="startDate"
     />
     <input
-      type='text'
-      placeholder='To'
-      className='form-control'
-      name='endDate'
-      value={experience.endDate}
-      onChange={(e) => changeExp(e, index, 'experience')}
+      type="text"
+      placeholder="To"
+      className="form-control"
+      name="endDate"
     />
-    <button
-      className='btn btn-danger mb-1'
-      onClick={() => deleteExp(index, 'experience')}
-    >
+    <button className="btn btn-danger mb-1" type="button">
       Delete Experience
     </button>
   </div>
 );
+export default ExperienceItem;
