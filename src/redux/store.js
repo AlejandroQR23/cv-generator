@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import cvReducer from "./cv/cvSlice";
+import cvReducer from "./cv/cv.slice";
 
 export default configureStore({
   reducer: {
