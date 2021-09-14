@@ -1,7 +1,7 @@
 export const changeInput = (field, input) => {
-  const { i, name, value } = input;
+  const { index, name, value } = input;
 
-  const newField = field.map((item, index) => {
+  const newField = field.map((item, i) => {
     if (index === i) return { ...item, [name]: value };
     return item;
   });
